@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Agama - Eka Salsabila</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-pink: #f8d7da;
+            --soft-pink: #fdf2f2;
+            --accent-pink: #e4a1a1;
+            --text-dark: #4a4a4a;
+            --white: #ffffff;
+            --pdf-red: #e11d48;
+            --article-blue: #2980b9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+            background: var(--white);
+            border-bottom: 1px solid var(--soft-pink);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: bold; font-size: 24px; letter-spacing: 2px; color: var(--accent-pink); }
+        .nav-links { display: flex; align-items: center; gap: 20px; }
+
+        .tab-btn {
+            background: none; border: none; color: var(--text-dark);
+            font-size: 0.9rem; font-weight: 500; cursor: pointer;
+            padding: 10px 5px; transition: 0.3s;
+        }
+
+        .tab-btn.active { color: var(--accent-pink); border-bottom: 2px solid var(--accent-pink); }
+
+        .profile-section { display: flex; align-items: center; gap: 12px; border-left: 1px solid var(--soft-pink); padding-left: 20px; }
+        .profile-info { text-align: right; line-height: 1.2; }
+        .profile-info .name { font-weight: bold; font-size: 0.9rem; color: var(--text-dark); }
+        .profile-info .details { font-size: 0.75rem; color: #888; }
+        .profile-photo { width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid var(--soft-pink); }
+        .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+        .tab-content { display: none; padding: 40px 10%; animation: fadeIn 0.5s ease; }
+        .tab-content.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Materi Sidebar Layout */
+        .materi-container { display: flex; gap: 30px; margin-top: 20px; }
+        .materi-sidebar { flex: 1; display: flex; flex-direction: column; gap: 8px; max-height: 550px; overflow-y: auto; padding-right: 10px; }
+        .menu-item { text-align: left; padding: 14px 18px; background: var(--soft-pink); border: none; border-radius: 6px; cursor: pointer; font-size: 0.85rem; transition: 0.2s; color: var(--text-dark); font-weight: 500; }
+        .menu-item:hover, .menu-item.active { background: var(--accent-pink); color: white; }
+        .materi-detail { flex: 2; padding: 35px; border: 1px solid var(--soft-pink); border-radius: 12px; background: #fff; min-height: 450px; line-height: 1.6; }
+
+        /* Grid Tugas */
+        .tugas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .tugas-card {
+            background: var(--white);
+            border: 1px solid var(--soft-pink);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .tugas-card:hover { transform: translateY(-5px); border-color: var(--accent-pink); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        /* Komentar Section */
+        .comment-section { margin-top: 30px; border-top: 2px solid var(--soft-pink); padding-top: 20px; text-align: left; }
+        .comment-input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; box-sizing: border-box; font-family: inherit; }
+        .comment-btn { background: var(--accent-pink); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .comment-list { margin-top: 20px; max-height: 200px; overflow-y: auto; }
+        .comment-item { background: #f9f9f9; padding: 10px; border-radius: 6px; margin-bottom: 8px; font-size: 0.9rem; border-left: 4px solid var(--accent-pink); }
+
+        /* Modal & Scroll Fix */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 2000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            overflow-y: auto;
+            padding: 40px 0;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: auto;
+            padding: 50px;
+            border-radius: 15px;
+            width: 85%;
+            max-width: 1000px;
+            position: relative;
+            box-sizing: border-box;
+            animation: slideDown 0.4s ease;
+        }
+
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+        .close-modal { position: absolute; right: 25px; top: 20px; font-size: 30px; cursor: pointer; color: #999; }
+
+        /* Artikel Style */
+        .artikel-ilmiah { line-height: 1.8; color: #333; text-align: justify; }
+        .artikel-header { text-align: center; border-bottom: 3px solid var(--article-blue); margin-bottom: 40px; padding-bottom: 20px; }
+        .section-title { font-size: 22px; color: var(--article-blue); border-left: 6px solid var(--article-blue); padding-left: 15px; margin: 35px 0 15px 0; }
+        .data-table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        .data-table th, .data-table td { border: 1px solid #ddd; padding: 15px; }
+        .data-table th { background: #f4f7f9; }
+
+        footer { background: var(--soft-pink); padding: 25px; text-align: center; font-size: 0.8rem; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AGAMA</div>
+        <nav class="nav-links">
+            <button class="tab-btn active" onclick="openTab(event, 'beranda')">Beranda</button>
+            <button class="tab-btn" onclick="openTab(event, 'materi')">Materi</button>
+            <button class="tab-btn" onclick="openTab(event, 'tugas')">Tugas</button>
+        </nav>
+        <div class="profile-section">
+            <div class="profile-info">
+                <div class="name">Eka Salsabila</div>
+                <div class="details">Kelas I233D | NIM: 312310277</div>
+            </div>
+            <div class="profile-photo"><img src="gambar/gambar1.jpg"></div>
+        </div>
+    </header>
+
+    <!-- TAB BERANDA -->
+    <div id="beranda" class="tab-content active">
+        <div style="text-align: center; padding: 80px 0;">
+            <h1 style="font-size: 3.5rem;">Tumbuh Dalam Iman & Ilmu</h1>
+            <p>Portofolio Pembelajaran Pendidikan Agama Islam 2026</p>
+        </div>
+    </div>
+
+    <!-- TAB MATERI -->
+    <div id="materi" class="tab-content">
+        <div class="materi-container">
+            <div class="materi-sidebar">
+                <button class="menu-item active" onclick="loadMateri('m1', this)">1. Konsep Syahadatain</button>
+                <button class="menu-item" onclick="loadMateri('m2', this)">2. Konsep Manusia</button>
+                <button class="menu-item" onclick="loadMateri('m3', this)">3. Paradigma Qur'ani</button>
+                <button class="menu-item" onclick="loadMateri('m4', this)">4. Kisah Al-Qur'an</button>
+                <button class="menu-item" onclick="loadMateri('m5', this)">5. Ghozwatul Fikri</button>
+                <button class="menu-item" onclick="loadMateri('m6', this)">6. Syaithan & Iblis</button>
+                <button class="menu-item" onclick="loadMateri('m7', this)">7. Fiqh Da’wah</button>
+                <button class="menu-item" onclick="loadMateri('m8', this)">8. Masyarakat Madani</button>
+                <button class="menu-item" onclick="loadMateri('m9', this)">9. Kemungkaran Umat</button>
+                <button class="menu-item" onclick="loadMateri('m10', this)">10. Adab 1 (Safar & Makan)</button>
+                <button class="menu-item" onclick="loadMateri('m11', this)">11. Adab 2 (Pakaian)</button>
+                <button class="menu-item" onclick="loadMateri('m12', this)">12. Manajemen Kematian 1</button>
+                <button class="menu-item" onclick="loadMateri('m13', this)">13. Manajemen Kematian 2</button>
+            </div>
+
+            <div class="materi-detail" id="display-materi">
+                <h2 id="materi-title">1. Konsep Syahadatain</h2>
+                <div id="materi-body">Syahadatain adalah gerbang masuk Islam yang menjadi landasan utama bagi seluruh amal ibadah seorang Muslim.</div>
+                <div id="materi-source" style="margin-top: 20px; font-style: italic; color: #999;">Sumber: Kitab At-Tauhid</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB TUGAS -->
+    <div id="tugas" class="tab-content">
+        <div class="tugas-grid">
+            <div class="tugas-card" onclick="openModal('modalTugas1')">
+                <i class="fas fa-file-pdf" style="font-size: 3rem; color: var(--pdf-red);"></i>
+                <h3>Tugas 1</h3>
+                <p>Kisah Para Nabi Pra-Ibrahim</p>
+                <span style="color: var(--accent-pink); font-weight: bold;">Lihat PDF →</span>
+            </div>
+
+            <div class="tugas-card" onclick="openModal('modalTugas2')">
+                <i class="fas fa-newspaper" style="font-size: 3rem; color: var(--article-blue);"></i>
+                <h3>Tugas 2</h3>
+                <p>Artikel Ilmiah: Hakikat Manusia</p>
+                <span style="color: var(--accent-pink); font-weight: bold;">Baca Artikel →</span>
+            </div>
+
+            <div class="tugas-card" onclick="openModal('modalTugas3')">
+                <i class="fas fa-comment-dots" style="font-size: 3rem; color: #555;"></i>
+                <h3>Tugas 3</h3>
+                <p>Analisis Kasus & Komentar</p>
+                <span style="color: var(--accent-pink); font-weight: bold;">Diskusi →</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL TUGAS 1 -->
+    <div id="modalTugas1" class="modal">
+        <div class="modal-content" style="text-align: center;">
+            <span class="close-modal" onclick="closeModal('modalTugas1')">&times;</span>
+            <i class="fas fa-file-pdf" style="font-size: 4rem; color: #e11d48; margin-bottom: 20px;"></i>
+            <h2>KISAH PARA NABI PRA-IBRAHIM</h2>
+            <p>Materi lengkap mengenai sejarah dan ibrah dari para Nabi sebelum Nabi Ibrahim AS.</p>
+            <br>
+            <a href="https://pustakalajnah.kemenag.go.id/uploads/Kisah_Nabi_Pra-Ibrahim.pdf" target="_blank" style="background: var(--pdf-red); color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">Buka File PDF</a>
+        </div>
+    </div>
+
+    <!-- MODAL TUGAS 2 (ISI LENGKAP) -->
+    <div id="modalTugas2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalTugas2')">&times;</span>
+            <article class="artikel-ilmiah">
+                <header class="artikel-header">
+                    <h1>HAKIKAT MANUSIA DALAM PERSPEKTIF ISLAM</h1>
+                    <p>Integrasi Jasmani, Rohani, dan Akal</p>
+                </header>
+
+                <p>Manusia adalah makhluk paling sempurna yang diciptakan oleh Allah SWT. Kesempurnaan ini tidak hanya terletak pada bentuk fisiknya yang proporsional, tetapi juga pada potensi spiritual dan intelektual yang dimilikinya.</p>
+
+                <h2 class="section-title">1. Terminologi Manusia dalam Al-Qur'an</h2>
+                <ul>
+                    <li><strong>Al-Basyar:</strong> Merujuk pada dimensi biologis manusia.</li>
+                    <li><strong>Al-Insan:</strong> Merujuk pada kemampuan berpikir dan memikul amanah.</li>
+                    <li><strong>An-Nas:</strong> Merujuk pada eksistensi sebagai makhluk sosial.</li>
+                </ul>
+
+                <h2 class="section-title">2. Dimensi Penciptaan</h2>
+                <p>Secara fisik, manusia berasal dari saripati tanah yang kemudian berkembang melalui tahapan nutfah, 'alaqah, dan mudghah.</p>
+                <table class="data-table">
+                    <thead>
+                        <tr><th>Komponen</th><th>Asal Muasal</th><th>Kebutuhan</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Jasmani</td><td>Tanah</td><td>Nutrisi & Fisik</td></tr>
+                        <tr><td>Rohani</td><td>Ruh Ilahi</td><td>Ibadah & Dzikir</td></tr>
+                        <tr><td>Akal</td><td>Anugerah</td><td>Ilmu Pengetahuan</td></tr>
+                    </tbody>
+                </table>
+
+                <h2 class="section-title">3. Tugas Utama</h2>
+                <p>Sebagai makhluk yang diberikan akal, manusia memiliki dua peran utama:</p>
+                <ol>
+                    <li><strong>Hamba Allah ('Abdun):</strong> Berkewajiban menyembah Sang Pencipta.</li>
+                    <li><strong>Khalifah:</strong> Pengelola bumi demi kemaslahatan umat.</li>
+                </ol>
+
+                <h2 class="section-title">4. Kesimpulan</h2>
+                <p>Memahami hakikat manusia berarti menyadari tanggung jawab besar di dunia sebagai bekal menuju akhirat. Keseimbangan jasmani dan rohani adalah kunci utama.</p>
+                
+                <p style="margin-top: 50px; font-size: 0.9rem; color: #777;">Sumber: Tafsir Ibnu Katsir & Jurnal UIN.</p>
+            </article>
+        </div>
+    </div>
+
+    <!-- MODAL TUGAS 3 -->
+    <div id="modalTugas3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalTugas3')">&times;</span>
+            <header class="artikel-header" style="border-bottom-color: var(--accent-pink);">
+                <h1>ANALISIS KASUS PENISTAAN AGAMA</h1>
+                <p>Diskusi dan Pendapat Mahasiswa</p>
+            </header>
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <!-- Referensi file: Screenshot 2026-05-02 190945.png -->
+                <img src="gambar/gambar2.png" alt="Analisis Kasus" style="max-width: 100%; border-radius: 10px; border: 1px solid #ddd;">
+            </div>
+
+            <p>Kasus penistaan agama seringkali menjadi topik krusial dalam interaksi sosial dan hukum di Indonesia. Tugas ini bertujuan untuk menganalisis penyebab dan dampak dari fenomena tersebut dari sudut pandang etika dan regulasi.</p>
+
+            <!-- Fitur Komentar -->
+            <div class="comment-section">
+                <h3><i class="fas fa-comments"></i> Berikan Komentar Anda</h3>
+                <textarea id="commentInput" class="comment-input" rows="3" placeholder="Tulis pendapat atau komentar kamu mengenai Tugas 3..."></textarea>
+                <button class="comment-btn" onclick="saveComment()">Kirim Komentar</button>
+                
+                <div id="commentList" class="comment-list">
+                    <!-- Komentar dimuat di sini -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer><p>&copy; 2026 Portofolio Agama - Eka Salsabila</p></footer>
+
+    <script>
+        const dataMateri = {
+            m1: { title: "1. Konsep Syahadatain", body: "Syahadatain adalah gerbang masuk Islam...", source: "Kitab At-Tauhid" },
+            m2: { title: "2. Konsep Manusia", body: "Manusia adalah makhluk sempurna dengan akal...", source: "Jurnal Psikologi Islam" },
+            m3: { title: "3. Paradigma Qur'ani", body: "Menjadikan Al-Qur'an sebagai standar berpikir.", source: "Konsep Pendidikan" },
+            m4: { title: "4. Kisah Al-Qur'an", body: "Ibrah sejarah umat terdahulu.", source: "Ibnu Katsir" },
+            m5: { title: "5. Ghozwatul Fikri", body: "Waspada terhadap perang pemikiran.", source: "Abu Al-Hasan" },
+            m6: { title: "6. Syaithan & Iblis", body: "Mengenali tipu daya musuh nyata.", source: "Ibnu Jauzi" },
+            m7: { title: "7. Fiqh Da’wah", body: "Etika dan strategi berdakwah.", source: "Mustafa Masyhur" },
+            m8: { title: "8. Masyarakat Madani", body: "Membangun tatanan sosial yang islami.", source: "Sejarah Islam" },
+            m9: { title: "9. Kemungkaran Umat", body: "Mengidentifikasi penyakit sosial.", source: "MUI" },
+            m10: { title: "10. Adab 1 (Safar & Makan)", body: "Sunnah-sunnah dalam keseharian.", source: "Al-Adab al-Mufrad" },
+            m11: { title: "11. Adab 2 (Pakaian)", body: "Ketentuan menutup aurat.", source: "Riyadhus Shalihin" },
+            m12: { title: "12. Manajemen Kematian 1", body: "Persiapan menghadapi ajal.", source: "At-Tadzkirah" },
+            m13: { title: "13. Manajemen Kematian 2", body: "Prosesi dan alam barzakh.", source: "Ibnu Qayyim" }
+        };
+
+        function loadMateri(id, element) {
+            document.getElementById('materi-title').innerText = dataMateri[id].title;
+            document.getElementById('materi-body').innerHTML = dataMateri[id].body;
+            document.getElementById('materi-source').innerText = "Sumber: " + dataMateri[id].source;
+            const buttons = document.getElementsByClassName('menu-item');
+            for (let btn of buttons) { btn.classList.remove('active'); }
+            element.classList.add('active');
+        }
+
+        function openTab(evt, tabName) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let content of contents) { content.classList.remove("active"); }
+            const btns = document.getElementsByClassName("tab-btn");
+            for (let btn of btns) { btn.classList.remove("active"); }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        function openModal(id) { 
+            document.getElementById(id).style.display = "block"; 
+            if(id === 'modalTugas3') { displayComments(); }
+        }
+        
+        function closeModal(id) { document.getElementById(id).style.display = "none"; }
+
+        // Fitur Komentar dengan LocalStorage agar tidak hilang
+        function saveComment() {
+            const input = document.getElementById('commentInput');
+            const text = input.value.trim();
+            if (text === "") return;
+
+            let comments = JSON.parse(localStorage.getItem('comments_tugas_3')) || [];
+            comments.push({ text: text, time: new Date().toLocaleString('id-ID') });
+            localStorage.setItem('comments_tugas_3', JSON.stringify(comments));
+            
+            input.value = "";
+            displayComments();
+        }
+
+        function displayComments() {
+            const container = document.getElementById('commentList');
+            const comments = JSON.parse(localStorage.getItem('comments_tugas_3')) || [];
+            container.innerHTML = comments.length === 0 ? '<p style="color:#999; font-size:0.8rem;">Belum ada komentar.</p>' : '';
+            
+            comments.slice().reverse().forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `<strong>User</strong> <small style="float:right; color:#bbb;">${c.time}</small><br>${c.text}`;
+                container.appendChild(div);
+            });
+        }
+
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') { event.target.style.display = "none"; }
+        }
+    </script>
+</body>
+</html>
