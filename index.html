@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Agama - Eka Salsabila</title>
+    <title>Portofolio Agama Elegan - Eka Salsabila</title>
     
     <!-- Icon & Premium Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,19 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* --- PALET WARNA BARU: SOFT PINK & SOFT BLUE (PASTEL ELEGAN) --- */
+        /* --- PALET WARNA: SOFT PINK & SOFT BLUE (PASTEL ELEGAN) --- */
         :root {
-            --bg-base: #F4F7FB;           /* Biru sangat muda/putih salju untuk background utama */
-            --bg-card: #FFFFFF;           /* Putih bersih untuk kontras komponen kartu */
-            --primary-blue: #4A7C59;       
-            --soft-blue: #6C8EBF;         /* Biru tenang, teduh, dan profesional */
-            --deep-blue: #3A5A80;         /* Biru tua lembut untuk teks utama & aksen kuat */
-            --soft-pink: #F1A7B4;         /* Pink pastel lembut yang manis dan tenang */
-            --deep-pink: #D07A8A;         /* Pink gelap/rose tua untuk aksen penegas */
-            --bg-pink-light: #FCEFF2;     /* Sentuhan background pink sangat tipis */
-            --text-main: #2F3E46;         /* Abu-abu gelap kebiruan untuk teks agar mata tidak lelah */
-            --text-muted: #6C7A89;        /* Warna teks sekunder yang halus */
-            --border-color: #E2E8F0;      /* Garis pembatas abu-abu super tipis */
+            --bg-base: #F4F7FB;           
+            --bg-card: #FFFFFF;           
+            --soft-blue: #6C8EBF;         
+            --deep-blue: #3A5A80;         
+            --soft-pink: #F1A7B4;         
+            --deep-pink: #D07A8A;         
+            --bg-pink-light: #FCEFF2;     
+            --text-main: #2F3E46;         
+            --text-muted: #6C7A89;        
+            --border-color: #E2E8F0;      
             --radius-elegant: 16px;
             --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
@@ -44,13 +43,11 @@
             position: relative;
         }
 
-        /* Tipografi judul menggunakan font serif klasik bernuansa premium */
         h1, h2, h3, .logo, .tab-btn {
             font-family: 'Cinzel', serif;
             letter-spacing: 0.5px;
         }
 
-        /* Gaya Khusus Tulisan Arab */
         .arabic-text {
             font-family: 'Amiri', serif;
             font-size: 1.45rem;
@@ -77,7 +74,7 @@
             border-radius: 50%;
             animation: floatAround 15s infinite ease-in-out;
         }
-        .circle-particle:nth-child(1) { width: 180px; height: 180px; top: 8%; left: -4%; background: rgba(241, 167, 180, 0.15); animation-delay: 0s; }
+        .circle-particle:nth-child(1) { width: 180px; height: 180px; top: 8%; left: -4%; background: rgba(241, 167, 180, 0.15); }
         .circle-particle:nth-child(2) { width: 220px; height: 220px; top: 50%; right: -5%; background: rgba(108, 142, 191, 0.12); animation-delay: 3s; }
         .circle-particle:nth-child(3) { width: 90px; height: 90px; top: 80%; left: 3%; background: rgba(241, 167, 180, 0.1); animation-delay: 5s; }
 
@@ -86,7 +83,7 @@
             50% { transform: translateY(-20px) scale(1.02) rotate(8deg); }
         }
 
-        /* --- STICKY NAVIGASI --- */
+        /* --- NAVIGATION --- */
         header {
             display: flex;
             justify-content: space-between;
@@ -120,50 +117,31 @@
         }
 
         .tab-btn {
-            background: none; 
-            border: none; 
-            color: var(--text-muted);
-            font-size: 0.85rem; 
-            font-weight: 600; 
-            cursor: pointer;
-            padding: 10px 24px; 
-            border-radius: 30px;
+            background: none; border: none; color: var(--text-muted);
+            font-size: 0.85rem; font-weight: 600; cursor: pointer;
+            padding: 10px 24px; border-radius: 30px;
             transition: var(--transition-smooth);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: uppercase; letter-spacing: 1px;
         }
-
-        .tab-btn:hover { 
-            color: var(--deep-blue);
-        }
-
+        .tab-btn:hover { color: var(--deep-blue); }
         .tab-btn.active { 
-            background: var(--soft-blue); 
-            color: white;
+            background: var(--soft-blue); color: white;
             box-shadow: 0 4px 15px rgba(108, 142, 191, 0.2);
         }
 
-        /* Profil Kanan Atas */
-        .profile-section { 
-            display: flex; 
-            align-items: center; 
-            gap: 14px; 
-        }
+        .profile-section { display: flex; align-items: center; gap: 14px; }
         .profile-info { text-align: right; }
         .profile-info .name { font-weight: 700; font-size: 0.95rem; color: var(--deep-blue); }
         .profile-info .details { font-size: 0.75rem; color: var(--deep-pink); font-weight: 700; letter-spacing: 0.5px; }
         .profile-photo { 
-            width: 42px; height: 42px; 
-            border-radius: 50%; overflow: hidden; 
-            border: 2px solid var(--soft-pink);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            width: 42px; height: 42px; border-radius: 50%; overflow: hidden; 
+            border: 2px solid var(--soft-pink); box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
         .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
 
         /* --- TAB CONTENT SYSTEM --- */
         .tab-content { 
-            display: none; 
-            padding: 50px 8%; 
+            display: none; padding: 50px 8%; 
             animation: fadeInSmooth 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
         }
         .tab-content.active { display: block; }
@@ -175,190 +153,175 @@
 
         /* ==================== 1. TAB BERANDA ==================== */
         .landing-container {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
-            align-items: center;
             max-width: 1100px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        /* Bagian Atas: Teks Judul Elegan */
+        .hero-top-layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 30px;
         }
 
         .hero-text-side { 
-            display: flex;
-            flex-direction: column;
+            flex: 1.5;
+            display: flex; 
+            flex-direction: column; 
         }
 
-        /* Box Desain Kaligrafi Lingkaran Premium */
         .hero-illustration-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 15px;
-            animation: floatY 5s infinite ease-in-out;
+            display: flex; justify-content: flex-start; align-items: center; margin-bottom: 5px;
         }
         .hero-illustration-box svg {
-            width: 100%;
-            max-width: 260px;
-            height: auto;
-            filter: drop-shadow(0 10px 20px rgba(108, 142, 191, 0.1));
-        }
-
-        @keyframes floatY {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            width: 90px; height: auto;
+            filter: drop-shadow(0 5px 15px rgba(108, 142, 191, 0.1));
         }
 
         .hero-subtitle {
-            font-size: 0.85rem;
-            color: var(--deep-pink);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 10px;
+            font-size: 0.85rem; color: var(--deep-pink); font-weight: 700;
+            text-transform: uppercase; letter-spacing: 2px; margin-top: 5px;
         }
 
         .hero-text-side h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            color: var(--deep-blue);
-            margin: 15px 0;
-            font-weight: 500;
+            font-size: 3rem; line-height: 1.2; color: var(--deep-blue); margin: 10px 0 15px 0; font-weight: 500;
         }
         .hero-text-side h1 span { 
-            color: var(--deep-pink); 
-            font-weight: 700;
-            border-bottom: 3px solid var(--soft-blue);
+            color: var(--deep-pink); font-weight: 700; border-bottom: 3px solid var(--soft-blue);
         }
 
-        .hero-description {
-            font-size: 1rem;
-            color: var(--text-muted);
-            margin-bottom: 35px;
+        .hero-description { font-size: 1rem; color: var(--text-muted); max-width: 700px; }
+
+        .hero-action-side {
+            flex: 0.5;
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 10px;
         }
 
         .cta-landing-btn {
-            align-self: flex-start;
-            background: var(--soft-blue);
-            color: white;
-            border: none;
-            padding: 15px 35px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition-smooth);
+            background: var(--soft-blue); color: white;
+            border: none; padding: 15px 35px; font-size: 0.9rem; font-weight: 600;
+            border-radius: 30px; cursor: pointer; transition: var(--transition-smooth);
             box-shadow: 0 10px 20px rgba(108, 142, 191, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            display: flex; align-items: center; gap: 12px; text-transform: uppercase; letter-spacing: 1px;
+            white-space: nowrap;
         }
         .cta-landing-btn:hover {
-            background: var(--soft-pink);
-            color: var(--deep-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(241, 167, 180, 0.3);
+            background: var(--soft-pink); color: var(--deep-blue);
+            transform: translateY(-2px); box-shadow: 0 12px 25px rgba(241, 167, 180, 0.3);
         }
 
-        /* Kartu Profil Utama */
-        .hero-profile-card {
+        /* --- KUSTOM HERO VIDEO MELEBAR (CINEMATIC 16:9 WIDESCREEN) --- */
+        .hero-video-box {
+            position: relative;
+            width: 100%;
+            max-height: 480px; /* Batas tinggi maksimal agar proporsional di monitor besar */
+            aspect-ratio: 16 / 7; /* Rasio super lebar sinematik */
+            border-radius: var(--radius-elegant);
+            overflow: hidden;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 20px 45px rgba(108, 142, 191, 0.12);
+            background: #000;
+        }
+
+        .hero-video-box video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Overlay Elegan di Atas Video */
+        .video-overlay {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            padding: 35px 40px;
+            background: linear-gradient(transparent, rgba(47, 62, 70, 0.9));
+            color: white;
+            display: flex; flex-direction: column; gap: 4px;
+            pointer-events: none;
+        }
+        .video-overlay p { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--soft-pink); }
+        .video-overlay h3 { font-size: 1.4rem; font-weight: 500; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+        /* --- KARTU BIODATA HORIZONTAL --- */
+        .biodata-section-wrapper {
+            max-width: 1100px;
+            margin: 30px auto 40px auto;
+        }
+        .biodata-horizontal-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-elegant);
-            padding: 40px 35px;
-            text-align: center;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            box-shadow: 0 10px 30px rgba(108, 142, 191, 0.04);
             position: relative;
-            box-shadow: 0 12px 30px rgba(108, 142, 191, 0.05);
-            transition: var(--transition-smooth);
         }
-        .hero-profile-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(108, 142, 191, 0.1);
-        }
-
-        .card-badge {
-            position: absolute;
-            top: -12px; right: 30px;
-            background: var(--deep-pink);
-            padding: 5px 16px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .profile-frame {
-            width: 115px; height: 115px;
-            border-radius: 50%; overflow: hidden;
-            margin: 0 auto 20px auto;
-            border: 3px solid var(--soft-pink);
-            padding: 4px;
-            background: var(--bg-card);
-        }
-        .profile-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-
-        .profile-card-name { font-size: 1.5rem; color: var(--deep-blue); font-weight: 700; }
-        .profile-card-meta { font-size: 0.85rem; color: var(--soft-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; }
-
-        .profile-mini-table {
-            width: 100%;
-            font-size: 0.9rem;
-            text-align: left;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
-        }
-        .profile-mini-table td { padding: 8px 0; }
-        .profile-mini-table td .label { color: var(--deep-blue); font-weight: 600; display: flex; align-items: center; gap: 10px; }
-
-        /* Kotak Status */
-        .landing-stats-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .biodata-left {
+            display: flex;
+            align-items: center;
             gap: 25px;
-            max-width: 1100px;
-            margin: 50px auto 0 auto;
+        }
+        .biodata-avatar-frame {
+            width: 90px; height: 90px;
+            border-radius: 50%; overflow: hidden;
+            border: 3px solid var(--soft-pink);
+            padding: 3px; background: white;
+            flex-shrink: 0;
+        }
+        .biodata-avatar-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        
+        .biodata-meta h2 { font-size: 1.6rem; color: var(--deep-blue); font-weight: 700; margin-bottom: 4px; }
+        .biodata-meta p { font-size: 0.9rem; color: var(--soft-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        .biodata-right-table {
+            display: flex;
+            gap: 40px;
+            border-left: 1px solid var(--border-color);
+            padding-left: 40px;
+        }
+        .bio-item-box { display: flex; flex-direction: column; gap: 4px; }
+        .bio-item-box .bio-label { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .bio-item-box .bio-value { font-size: 0.95rem; font-weight: 600; color: var(--deep-blue); }
+
+        .campus-badge {
+            background: var(--bg-pink-light); color: var(--deep-pink);
+            padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
+        }
+
+        /* Kotak Status Utama */
+        .landing-stats-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1100px; margin: 40px auto 0 auto;
         }
         .stat-box { 
-            text-align: center; 
-            background: var(--bg-card);
-            padding: 25px;
-            border-radius: var(--radius-elegant);
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
-            transition: var(--transition-smooth);
+            text-align: center; background: var(--bg-card); padding: 25px;
+            border-radius: var(--radius-elegant); border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01); transition: var(--transition-smooth);
         }
-        .stat-box:hover {
-            border-color: var(--soft-pink);
-            transform: translateY(-2px);
-        }
+        .stat-box:hover { border-color: var(--soft-pink); transform: translateY(-2px); }
         .stat-number { display: block; font-size: 2.2rem; color: var(--deep-blue); font-weight: 700; font-family: 'Cinzel', serif; }
         .stat-label { font-size: 0.75rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
 
         /* ==================== POSTER VISUAL SEGAR & IMPRESIF ==================== */
-        .poster-section-container {
-            max-width: 1100px;
-            margin: 80px auto 20px auto;
-            text-align: center;
-        }
+        .poster-section-container { max-width: 1100px; margin: 80px auto 20px auto; text-align: center; }
         .poster-section-title { font-size: 2rem; color: var(--deep-blue); font-weight: 500; }
         .poster-section-subtitle { font-size: 0.9rem; color: var(--deep-pink); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
 
         .poster-wrapper { max-width: 850px; margin: 0 auto; }
         .poster-container {
-            background: #EDF2F7; /* Kombinasi abu-biru super soft */
-            color: var(--text-main);
-            padding: 55px 45px;
-            border-radius: var(--radius-elegant);
-            box-shadow: 0 20px 40px rgba(108, 142, 191, 0.08);
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            border: 2px solid var(--soft-pink);
-            text-align: left;
-            position: relative;
+            background: #EDF2F7; color: var(--text-main); padding: 55px 45px;
+            border-radius: var(--radius-elegant); box-shadow: 0 20px 40px rgba(108, 142, 191, 0.08);
+            display: flex; flex-direction: column; gap: 25px; border: 2px solid var(--soft-pink); text-align: left; position: relative;
         }
 
         .poster-header h1 { font-size: 2.2rem; color: var(--deep-blue); font-weight: 500; text-align: center; }
@@ -366,39 +329,24 @@
 
         .poster-body { display: flex; flex-direction: column; gap: 20px; }
         .poster-item {
-            display: flex; gap: 22px; align-items: flex-start;
-            background: var(--bg-card);
-            padding: 22px; border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition-smooth);
+            display: flex; gap: 22px; align-items: flex-start; background: var(--bg-card);
+            padding: 22px; border-radius: 12px; border: 1px solid var(--border-color); transition: var(--transition-smooth);
         }
-        .poster-item:hover {
-            transform: scale(1.01);
-            border-color: var(--soft-blue);
-            box-shadow: 0 5px 15px rgba(108, 142, 191, 0.05);
-        }
+        .poster-item:hover { transform: scale(1.01); border-color: var(--soft-blue); box-shadow: 0 5px 15px rgba(108, 142, 191, 0.05); }
+        
         .poster-item .icon-box {
-            background: var(--bg-pink-light);
-            width: 42px; height: 42px; border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            color: var(--deep-pink); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;
+            background: var(--bg-pink-light); width: 42px; height: 42px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center; color: var(--deep-pink); font-size: 1.1rem; flex-shrink: 0; margin-top: 2px;
         }
         .poster-item strong { display: block; font-size: 1.1rem; color: var(--deep-blue); font-family: 'Cinzel', serif; margin-bottom: 6px; letter-spacing: 0.5px; }
         .poster-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 
-        /* Desain Ayat Qur'an di dalam poin */
         .point-ayat-box {
-            background: rgba(108, 142, 191, 0.05);
-            padding: 14px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border-right: 3px solid var(--soft-blue);
+            background: rgba(108, 142, 191, 0.05); padding: 14px; border-radius: 8px; margin-bottom: 10px; border-right: 3px solid var(--soft-blue);
         }
 
         .poster-hadis {
-            background: rgba(241, 167, 180, 0.15);
-            border-left: 4px solid var(--deep-pink);
-            padding: 22px; border-radius: 8px; margin-top: 10px;
+            background: rgba(241, 167, 180, 0.15); border-left: 4px solid var(--deep-pink); padding: 22px; border-radius: 8px; margin-top: 10px;
         }
         .hadis-translation { font-size: 0.95rem; font-style: italic; color: var(--deep-blue); line-height: 1.6; }
         .hadis-rawi { display: block; font-size: 0.8rem; color: var(--deep-pink); margin-top: 10px; text-align: right; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -406,55 +354,34 @@
         /* ==================== 2. TAB MATERI ==================== */
         .materi-container { display: flex; gap: 40px; margin-top: 20px; }
         .materi-sidebar { 
-            flex: 1; display: flex; flex-direction: column; gap: 8px; 
-            max-height: 520px; overflow-y: auto; padding-right: 10px;
+            flex: 1; display: flex; flex-direction: column; gap: 8px; max-height: 520px; overflow-y: auto; padding-right: 10px;
         }
-        /* Kustom Scrollbar Sidebar */
         .materi-sidebar::-webkit-scrollbar { width: 4px; }
         .materi-sidebar::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 2px; }
 
         .menu-item { 
-            text-align: left; padding: 15px 20px; 
-            background: var(--bg-card); border: 1px solid var(--border-color); 
-            border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600;
-            transition: var(--transition-smooth); color: var(--text-main);
+            text-align: left; padding: 15px 20px; background: var(--bg-card); border: 1px solid var(--border-color); 
+            border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: 600; transition: var(--transition-smooth); color: var(--text-main);
         }
-        .menu-item:hover { 
-            background: var(--bg-pink-light); transform: translateX(3px);
-            border-color: var(--soft-pink);
-        }
-        .menu-item.active { 
-            background: var(--soft-blue); color: white;
-            border-color: var(--soft-blue);
-        }
+        .menu-item:hover { background: var(--bg-pink-light); transform: translateX(3px); border-color: var(--soft-pink); }
+        .menu-item.active { background: var(--soft-blue); color: white; border-color: var(--soft-blue); }
         
         .materi-detail { 
-            flex: 1.8; padding: 45px; border: 1px solid var(--border-color); 
-            border-radius: var(--radius-elegant); background: var(--white); 
-            display: flex; flex-direction: column; justify-content: space-between;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            flex: 1.8; padding: 45px; border: 1px solid var(--border-color); border-radius: var(--radius-elegant); background: white; 
+            display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.02);
         }
         .materi-detail h2 { font-size: 1.6rem; color: var(--deep-blue); margin-bottom: 20px; font-weight: 500; }
         #materi-body { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
         #materi-source { 
-            margin-top: 35px; font-size: 0.8rem; font-weight: 700;
-            color: var(--deep-pink); border-top: 1px solid var(--border-color); padding-top: 20px;
-            text-transform: uppercase; letter-spacing: 0.5px;
+            margin-top: 35px; font-size: 0.8rem; font-weight: 700; color: var(--deep-pink); border-top: 1px solid var(--border-color); padding-top: 20px; text-transform: uppercase; letter-spacing: 0.5px;
         }
 
         /* ==================== 3. TAB TUGAS ==================== */
         .tugas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
         .tugas-card {
-            background: var(--white); border: 1px solid var(--border-color);
-            border-radius: var(--radius-elegant); padding: 40px 30px; text-align: center;
-            transition: var(--transition-smooth); cursor: pointer;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.01);
+            background: white; border: 1px solid var(--border-color); border-radius: var(--radius-elegant); padding: 40px 30px; text-align: center; transition: var(--transition-smooth); cursor: pointer; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.01);
         }
-        .tugas-card:hover { 
-            transform: translateY(-6px); 
-            border-color: var(--soft-pink);
-            box-shadow: 0 12px 30px rgba(108, 142, 191, 0.1);
-        }
+        .tugas-card:hover { transform: translateY(-6px); border-color: var(--soft-pink); box-shadow: 0 12px 30px rgba(108, 142, 191, 0.1); }
         .tugas-card i { font-size: 2.5rem; margin-bottom: 20px; color: var(--soft-blue); transition: var(--transition-smooth); }
         .tugas-card:hover i { color: var(--deep-pink); }
         .tugas-card h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: 8px; color: var(--deep-blue); }
@@ -464,16 +391,10 @@
 
         /* ==================== 4. SYSTEM MODAL POP-UP ==================== */
         .modal {
-            display: none; position: fixed; z-index: 2000; left: 0; top: 0;
-            width: 100%; height: 100%; background-color: rgba(47, 62, 70, 0.4);
-            backdrop-filter: blur(8px); overflow-y: auto; padding: 40px 0;
+            display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(47, 62, 70, 0.4); backdrop-filter: blur(8px); overflow-y: auto; padding: 40px 0;
         }
         .modal-content {
-            background-color: var(--bg-base); margin: auto; padding: 50px;
-            border-radius: var(--radius-elegant); width: 90%; max-width: 750px; position: relative;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-            animation: modalFadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            background-color: var(--bg-base); margin: auto; padding: 50px; border-radius: var(--radius-elegant); width: 90%; max-width: 750px; position: relative; border: 1px solid var(--border-color); box-shadow: 0 20px 50px rgba(0,0,0,0.08); animation: modalFadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
         @keyframes modalFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
@@ -484,34 +405,35 @@
         .artikel-header h1 { font-size: 1.8rem; color: var(--deep-blue); font-weight: 500; }
         .section-title { font-size: 1.15rem; color: var(--deep-blue); margin: 30px 0 12px 0; font-family: inherit; font-weight: 700; }
         
-        .data-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.01); }
+        .data-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.01); }
         .data-table th, .data-table td { border: 1px solid var(--border-color); padding: 14px; font-size: 0.9rem; }
         .data-table th { background: var(--soft-blue); color: white; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.8rem; }
 
         .btn-pdf {
-            background: var(--deep-pink); color: white; padding: 14px 35px;
-            text-decoration: none; border-radius: 30px; font-weight: 600; display: inline-block;
-            transition: var(--transition-smooth); box-shadow: 0 5px 15px rgba(208, 122, 138, 0.2);
-            text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem;
+            background: var(--deep-pink); color: white; padding: 14px 35px; text-decoration: none; border-radius: 30px; font-weight: 600; display: inline-block; transition: var(--transition-smooth); box-shadow: 0 5px 15px rgba(208, 122, 138, 0.2); text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem;
         }
         .btn-pdf:hover { transform: translateY(-1px); background: var(--deep-blue); box-shadow: 0 8px 20px rgba(58, 90, 128, 0.2); }
 
-        /* Komentar Section */
         .comment-section { margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 25px; }
-        .comment-input { width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 12px; font-family: inherit; font-size: 0.9rem; background: var(--white); }
+        .comment-input { width: 100%; padding: 14px; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 12px; font-family: inherit; font-size: 0.9rem; background: white; }
         .comment-input:focus { outline: 1px solid var(--soft-pink); }
         .comment-btn { background: var(--soft-blue); color: white; border: none; padding: 12px 26px; border-radius: 20px; font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.8rem; transition: var(--transition-smooth); }
         .comment-btn:hover { background: var(--deep-pink); }
 
-        /* --- FOOTER --- */
         footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid var(--border-color); margin-top: 40px; }
 
         /* --- RESPONSIVE LAYOUT --- */
         @media (max-width: 900px) {
             header { flex-direction: column; gap: 15px; padding: 15px; }
-            .landing-container { grid-template-columns: 1fr; text-align: center; }
-            .hero-text-side { align-items: center; }
-            .cta-landing-btn { align-self: center; }
+            .hero-top-layout { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+            .hero-illustration-box { justify-content: center; }
+            .hero-action-side { justify-content: center; width: 100%; }
+            .hero-video-box { aspect-ratio: 16 / 9; } /* Kembali ke standar di mobile agar tidak terlalu gepeng */
+            .video-overlay { padding: 20px; }
+            .video-overlay h3 { font-size: 1.1rem; }
+            .biodata-horizontal-card { flex-direction: column; text-align: center; padding: 30px 20px; gap: 20px; }
+            .biodata-left { flex-direction: column; gap: 15px; }
+            .biodata-right-table { border-left: none; padding-left: 0; flex-direction: column; gap: 15px; }
             .landing-stats-grid { grid-template-columns: 1fr; gap: 15px; }
             .materi-container { flex-direction: column; }
             .poster-container { padding: 30px 20px; }
@@ -547,65 +469,72 @@
     <!-- TAB BERANDA -->
     <div id="beranda" class="tab-content active">
         <div class="landing-container">
-            <div class="hero-text-side">
-                
-                <!-- KALIGRAFI ARAB SOFT PINK & BLUE -->
-                <div class="hero-illustration-box">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Lingkaran Luar Soft Pink Tipis -->
-                        <circle cx="100" cy="100" r="82" fill="none" stroke="#F1A7B4" stroke-width="1.5" opacity="0.7"/>
-                        <!-- Lingkaran Latar Belakang Soft Blue Lembut -->
-                        <circle cx="100" cy="100" r="78" fill="#6C8EBF" opacity="0.12"/>
-                        <!-- Lingkaran Dalam Putih Kokoh -->
-                        <circle cx="100" cy="100" r="64" fill="#FFFFFF" opacity="0.95"/>
-                        
-                        <!-- Teks Arab Klasik: Al-Ilmu (العِلْمُ) -->
-                        <text x="100" y="116" 
-                              font-family="'Traditional Arabic', 'Times New Roman', 'Segoe UI', serif" 
-                              font-size="54" 
-                              font-weight="bold"
-                              fill="#3A5A80" 
-                              text-anchor="middle">العِلْمُ</text>
-                        
-                        <!-- Ornamen Bintang Klasik Soft Pink -->
-                        <path d="M100 23 L102 28 L107 28 L103 31 L105 36 L100 33 L95 36 L97 31 L93 28 L98 28 Z" fill="#F1A7B4"/>
-                        <circle cx="45" cy="140" r="3" fill="#D07A8A"/>
-                        <circle cx="155" cy="140" r="3" fill="#6C8EBF"/>
-                    </svg>
+            
+            <!-- BAGIAN TEKS ATAS (WIDESCREEN HEADER LAYOUT) -->
+            <div class="hero-top-layout">
+                <div class="hero-text-side">
+                    <div class="hero-illustration-box">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="82" fill="none" stroke="#F1A7B4" stroke-width="1.5" opacity="0.7"/>
+                            <circle cx="100" cy="100" r="78" fill="#6C8EBF" opacity="0.12"/>
+                            <circle cx="100" cy="100" r="64" fill="#FFFFFF" opacity="0.95"/>
+                            <text x="100" y="116" font-family="'Traditional Arabic', 'Times New Roman', serif" font-size="54" font-weight="bold" fill="#3A5A80" text-anchor="middle">العِلْمُ</text>
+                        </svg>
+                    </div>
+                    <p class="hero-subtitle">✨ Ruang Belajar Jurnal Digital</p>
+                    <h1>Tumbuh Dalam <br><span>Iman & Ilmu</span></h1>
+                    <p class="hero-description">
+                        Selamat datang di portofolio akademis interaktif. Ruang ini didedikasikan untuk mengarsipkan rangkuman perkuliahan, pemahaman fiqih kontemporer, serta tugas berkala sepanjang studi agama Islam.
+                    </p>
                 </div>
-
-                <p class="hero-subtitle">✨ Ruang Belajar Jurnal Digital</p>
-                <h1>Tumbuh Dalam <br><span>Iman & Ilmu</span></h1>
-                <p class="hero-description">
-                    Selamat datang di portofolio akademis interaktif. Ruang ini didedikasikan untuk mengarsipkan rangkuman perkuliahan, pemahaman fiqih kontemporer, serta tugas berkala sepanjang studi agama Islam.
-                </p>
-                <button class="cta-landing-btn" onclick="document.querySelectorAll('.tab-btn')[1].click();">
-                    Jelajahi Materi <i class="fas fa-chevron-right"></i>
-                </button>
+                <div class="hero-action-side">
+                    <button class="cta-landing-btn" onclick="document.querySelectorAll('.tab-btn')[1].click();">
+                        Jelajahi Materi <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
             </div>
 
-            <!-- KARTU PROFIL UTAMA SOFT ELEGAN -->
-            <div class="hero-profile-card">
-                <div class="card-badge">Mahasiswa</div>
-                <div class="profile-frame">
-                    <img src="gambar/gambar1.jpg" alt="Eka Salsabila">
+            <!-- KOMPONEN VIDEO MELEBAR (PENGGANTI KOTAK PERSEGI) -->
+            <div class="hero-video-box">
+                <!-- GANTI 'gambar/video-hero.mp4' DENGAN FILE VIDEOMU -->
+                <video autoplay loop muted playsinline>
+                    <source src="gambar/video-hero.mp4" type="video/mp4">
+                    Browser Anda tidak mendukung tag video.
+                </video>
+                <div class="video-overlay">
+                    <p>Kajian Interaktif</p>
+                    <h3>Visualisasi Nilai & Syariat Islam</h3>
                 </div>
-                <h2 class="profile-card-name">Eka Salsabila</h2>
-                <p class="profile-card-meta">Informatics Engineering</p>
-                <table class="profile-mini-table">
-                    <tr>
-                        <td><span class="label"><i class="fas fa-id-card"></i> NIM</span></td>
-                        <td>: 312310277</td>
-                    </tr>
-                    <tr>
-                        <td><span class="label"><i class="fas fa-graduation-cap"></i> Kelas</span></td>
-                        <td>: I233D</td>
-                    </tr>
-                    <tr>
-                        <td><span class="label"><i class="fas fa-university"></i> Kampus</span></td>
-                        <td>: Universitas Pelita Bangsa</td>
-                    </tr>
-                </table>
+            </div>
+        </div>
+
+        <!-- LAYOUT BIODATA HORIZONTAL -->
+        <div class="biodata-section-wrapper">
+            <div class="biodata-horizontal-card">
+                <div class="biodata-left">
+                    <div class="biodata-avatar-frame">
+                        <img src="gambar/gambar1.jpg" alt="Eka Salsabila">
+                    </div>
+                    <div class="biodata-meta">
+                        <h2>Eka Salsabila</h2>
+                        <p>Informatics Engineering</p>
+                    </div>
+                </div>
+                
+                <div class="biodata-right-table">
+                    <div class="bio-item-box">
+                        <span class="bio-label"><i class="fas fa-id-card"></i> Nomor Induk Mahasiswa</span>
+                        <span class="bio-value">312310277</span>
+                    </div>
+                    <div class="bio-item-box">
+                        <span class="bio-label"><i class="fas fa-graduation-cap"></i> Kelas Akademik</span>
+                        <span class="bio-value">I233D</span>
+                    </div>
+                    <div class="bio-item-box">
+                        <span class="bio-label"><i class="fas fa-university"></i> Institusi Kampus</span>
+                        <span class="campus-badge">Universitas Pelita Bangsa</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -619,7 +548,7 @@
                 <span class="stat-label">Evaluasi Tugas</span>
             </div>
             <div class="stat-box">
-                <span class="stat-number">2023</span>
+                <span class="stat-number">2026</span>
                 <span class="stat-label">Periode Akademik</span>
             </div>
         </div>
@@ -631,7 +560,6 @@
             
             <div class="poster-wrapper">
                 <div class="poster-container">
-                    
                     <div class="poster-header">
                         <h1>ADAB & KETENTUAN BERPAKAIAN ISLAMI</h1>
                         <p style="font-size: 0.85rem; color: var(--deep-pink); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 8px;">Panduan Komprehensif Menjaga Kehormatan Sesuai Syariat</p>
@@ -639,66 +567,50 @@
                     </div>
                     
                     <div class="poster-body">
-                        
-                        <!-- Poin 1 -->
                         <div class="poster-item">
                             <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
                             <div style="width: 100%;">
                                 <strong>1. Kewajiban Menutup Aurat Secara Sempurna</strong>
                                 <div class="point-ayat-box">
-                                    <p class="arabic-text">يَٰٓأَيُّهَا ٱلنَّبِىُّ قُل لِّأَزْوَٰجِكَ وَبَنَاتِكَ وَنِسَآءِ ٱلْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَٰبِيبِهِنَّ</p>
+                                    <p class="arabic-text">...يَٰٓأَيُّهَا ٱلنَّبِىُّ قُل لِّأَزْوَٰجِكَ وَبَنَاتِكَ وَنِسَآءِ ٱلْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَٰبِيبِهِنَّ</p>
                                     <p style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Wahai Nabi! Katakanlah kepada istri-istrimu, anak-anak perempuanmu dan istri-istri orang mukmin, 'Hendaklah mereka menutupkan jilbabnya ke seluruh tubuh mereka'..." (QS. Al-Ahzab: 59)</p>
                                 </div>
-                                <p>
-                                    Pakaian wajib menutupi seluruh anggota tubuh yang dilarang untuk diperlihatkan kepada yang bukan mahram. Bagi wanita, aurat meliputi seluruh tubuh kecuali wajah dan kedua telapak tangan.
-                                </p>
+                                <p>Pakaian wajib menutupi seluruh anggota tubuh yang dilarang untuk diperlihatkan kepada yang bukan mahram. Bagi wanita, aurat meliputi seluruh tubuh kecuali wajah dan kedua telapak tangan.</p>
                             </div>
                         </div>
                         
-                        <!-- Poin 2 -->
                         <div class="poster-item">
                             <div class="icon-box"><i class="fas fa-compress-alt"></i></div>
                             <div style="width: 100%;">
                                 <strong>2. Longgar (Tidak Ketat) & Tidak Menerawang</strong>
                                 <div class="point-ayat-box">
-                                    <p class="arabic-text">وَلَا يُبْدِينَ زِينَتَهُنَّ إِلَّا مَا ظَهَرَ مِنْهَا ۖ وَلْيَضْرِبْنَ بِخُمُرِهِنَّ عَلَىٰ جُيُوبِهِنَّ</p>
+                                    <p class="arabic-text">...وَلَا يُبْدِينَ زِينَتَهُنَّ إِلَّا مَا ظَهَرَ مِنْهَا ۖ وَلْيَضْرِبْنَ بِخُمُرِهِنَّ عَلَىٰ جُيُوبِهِنَّ</p>
                                     <p style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"...dan janganlah mereka menampakkan perhiasannya, kecuali yang (biasa) nampak dari padanya. Dan hendaklah mereka menutupkan kain kudung ke dadanya..." (QS. An-Nur: 31)</p>
                                 </div>
-                                <p>
-                                    Pakaian tidak boleh membentuk lekuk tubuh fisik (ketat) dan bahan kain harus cukup tebal sehingga warna kulit tidak tampak dari luar (transparan). Pakaian yang tipis atau membentuk tubuh dinilai belum memenuhi hakikat menutup aurat.
-                                </p>
+                                <p>Pakaian tidak boleh membentuk lekuk tubuh fisik (ketat) dan bahan kain harus cukup tebal sehingga warna kulit tidak tampak dari luar (transparan).</p>
                             </div>
                         </div>
                         
-                        <!-- Poin 3 -->
                         <div class="poster-item">
                             <div class="icon-box"><i class="fas fa-venus-mars"></i></div>
                             <div style="width: 100%;">
                                 <strong>3. Tidak Menyerupai Lawan Jenis & Orang Kafir</strong>
-                                <p>
-                                    Rasulullah melarang keras wanita memakai pakaian yang berkarakteristik khusus pria, begitu pula sebaliknya. Selain itu, pakaian tidak boleh meniru tren sandang yang menjadi ciri khas atau simbol peribadatan agama lain (*tasyabbuh*).
-                                </p>
+                                <p>Rasulullah melarang keras wanita memakai pakaian yang berkarakteristik khusus pria, begitu pula sebaliknya. Selain itu, pakaian tidak boleh meniru tren sandang yang menjadi ciri khas kaum non-muslim.</p>
                             </div>
                         </div>
 
-                        <!-- Poin 4 -->
                         <div class="poster-item">
                             <div class="icon-box"><i class="fas fa-eye-slash"></i></div>
                             <div style="width: 100%;">
                                 <strong>4. Bukan Libas Syuhrah (Pakaian Sensasional)</strong>
-                                <p>
-                                    Pakaian yang dikenakan tidak boleh terlalu mewah berlebihan dengan tujuan pamer (*kesombongan*) dan juga tidak boleh terlalu kumal/aneh demi mencari perhatian atau sensasi publik. Tampillah bersahaja, rapi, bersih, dan proporsional.
-                                </p>
+                                <p>Pakaian yang dikenakan tidak boleh terlalu mewah berlebihan dengan tujuan pamer (kesombongan) dan juga tidak boleh terlalu kumal/aneh demi mencari perhatian atau sensasi publik.</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Hadis Pilihan Berbahasa Arab -->
                     <div class="poster-hadis">
                         <p class="arabic-text" style="font-size: 1.3rem; margin-bottom: 15px; color: #2F3E46;">صِنْفَانِ مِنْ أَهْلِ النَّارِ لَمْ أَرَهُمَا ... وَنِسَاءٌ كَاسِيَاتٌ عَارِيَاتٌ مُمِيلَاتٌ مَائِلَاتٌ رُؤُوسُهُنَّ كَأَسْنِمَةِ الْبُخْتِ الْمَائِلَةِ</p>
-                        <p class="hadis-translation">
-                            "Ada dua golongan penduduk neraka yang belum pernah aku lihat... (salah satunya) wanita-wanita yang berpakaian tetapi telanjang, cenderung kepada kemaksiatan dan membuat orang lain cenderung kepada kemaksiatan. Kepala mereka seperti punuk unta yang miring..."
-                        </p>
+                        <p class="hadis-translation">"Ada dua golongan penduduk neraka yang belum pernah aku lihat... (salah satunya) wanita-wanita yang berpakaian tetapi telanjang, cenderung kepada kemaksiatan dan membuat orang lain cenderung kepada kemaksiatan..."</p>
                         <span class="hadis-rawi">&mdash; HR. Muslim (No. 2128)</span>
                     </div>
                 </div>
@@ -761,7 +673,7 @@
         </div>
     </div>
 
-    <!-- MODAL TUGAS 1 -->
+    <!-- MODAL POPUPS -->
     <div id="modalTugas1" class="modal">
         <div class="modal-content" style="text-align: center; max-width: 550px;">
             <span class="close-modal" onclick="closeModal('modalTugas1')">&times;</span>
@@ -772,7 +684,6 @@
         </div>
     </div>
 
-    <!-- MODAL TUGAS 2 -->
     <div id="modalTugas2" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modalTugas2')">&times;</span>
@@ -786,30 +697,17 @@
                 <h2 class="section-title">Tabel Klasifikasi Kebutuhan Eksistensial:</h2>
                 <table class="data-table">
                     <thead>
-                        <tr>
-                            <th>Dimensi Manusia</th>
-                            <th>Asal Muasal Unsur</th>
-                            <th>Metode Pemenuhan Kebutuhan</th>
-                        </tr>
+                        <tr><th>Dimensi Manusia</th><th>Asal Muasal Unsur</th><th>Metode Pemenuhan Kebutuhan</th></tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>Jasmani (Fisik)</strong></td>
-                            <td>Sari Pati Tanah Bumi</td>
-                            <td>Asupan nutrisi thoyyib, sandang layak, serta istirahat seimbang.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Rohani (Spiritual)</strong></td>
-                            <td>Tiupan Ruh Suci Ilahiyah</td>
-                            <td>Ibadah vertikal, ketenangan dzikir, serta eksplorasi ilmu syar'i.</td>
-                        </tr>
+                        <tr><td><strong>Jasmani (Fisik)</strong></td><td>Sari Pati Tanah Bumi</td><td>Asupan nutrisi thoyyib, sandang layak, serta istirahat seimbang.</td></tr>
+                        <tr><td><strong>Rohani (Spiritual)</strong></td><td>Tiupan Ruh Suci Ilahiyah</td><td>Ibadah vertikal, ketenangan dzikir, serta eksplorasi ilmu syar'i.</td></tr>
                     </tbody>
                 </table>
             </article>
         </div>
     </div>
 
-    <!-- MODAL TUGAS 3 -->
     <div id="modalTugas3" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('modalTugas3')">&times;</span>
