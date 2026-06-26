@@ -160,7 +160,6 @@
             gap: 35px;
         }
 
-        /* Bagian Atas: Teks Judul Elegan */
         .hero-top-layout {
             display: flex;
             justify-content: space-between;
@@ -218,12 +217,11 @@
             transform: translateY(-2px); box-shadow: 0 12px 25px rgba(241, 167, 180, 0.3);
         }
 
-        /* --- KUSTOM HERO VIDEO MELEBAR (CINEMATIC 16:9 WIDESCREEN) --- */
         .hero-video-box {
             position: relative;
             width: 100%;
-            max-height: 480px; /* Batas tinggi maksimal agar proporsional di monitor besar */
-            aspect-ratio: 16 / 7; /* Rasio super lebar sinematik */
+            max-height: 480px; 
+            aspect-ratio: 16 / 7; 
             border-radius: var(--radius-elegant);
             overflow: hidden;
             border: 4px solid #FFFFFF;
@@ -237,7 +235,6 @@
             object-fit: cover;
         }
 
-        /* Overlay Elegan di Atas Video */
         .video-overlay {
             position: absolute;
             bottom: 0; left: 0; width: 100%;
@@ -299,7 +296,6 @@
             padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
         }
 
-        /* Kotak Status Utama */
         .landing-stats-grid {
             display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1100px; margin: 40px auto 0 auto;
         }
@@ -377,7 +373,7 @@
         }
 
         /* ==================== 3. TAB TUGAS ==================== */
-        .tugas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .tugas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
         .tugas-card {
             background: white; border: 1px solid var(--border-color); border-radius: var(--radius-elegant); padding: 40px 30px; text-align: center; transition: var(--transition-smooth); cursor: pointer; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.01);
         }
@@ -389,12 +385,20 @@
         .tugas-card span { border: 1px solid var(--border-color); padding: 8px 18px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; color: var(--soft-blue); text-transform: uppercase; letter-spacing: 0.5px; }
         .tugas-card:hover span { background: var(--soft-blue); color: white; border-color: var(--soft-blue); }
 
+        /* Kustom Desain Khusus Jurnal Ilmiah Lembut */
+        .jurnal-text-layout {
+            color: var(--text-main); font-size: 0.98rem; line-height: 1.8; text-align: justify;
+        }
+        .jurnal-quote-box {
+            background: var(--bg-pink-light); border-left: 4px solid var(--deep-pink); padding: 18px; margin: 20px 0; border-radius: 4px;
+        }
+
         /* ==================== 4. SYSTEM MODAL POP-UP ==================== */
         .modal {
             display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(47, 62, 70, 0.4); backdrop-filter: blur(8px); overflow-y: auto; padding: 40px 0;
         }
         .modal-content {
-            background-color: var(--bg-base); margin: auto; padding: 50px; border-radius: var(--radius-elegant); width: 90%; max-width: 750px; position: relative; border: 1px solid var(--border-color); box-shadow: 0 20px 50px rgba(0,0,0,0.08); animation: modalFadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            background-color: var(--bg-base); margin: auto; padding: 50px; border-radius: var(--radius-elegant); width: 90%; max-width: 800px; position: relative; border: 1px solid var(--border-color); box-shadow: 0 20px 50px rgba(0,0,0,0.08); animation: modalFadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
         @keyframes modalFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
@@ -403,7 +407,7 @@
 
         .artikel-header { text-align: center; border-bottom: 1px solid var(--border-color); margin-bottom: 30px; padding-bottom: 25px; }
         .artikel-header h1 { font-size: 1.8rem; color: var(--deep-blue); font-weight: 500; }
-        .section-title { font-size: 1.15rem; color: var(--deep-blue); margin: 30px 0 12px 0; font-family: inherit; font-weight: 700; }
+        .section-title { font-size: 1.15rem; color: var(--deep-blue); margin: 30px 0 12px 0; font-family: inherit; font-weight: 700; border-bottom: 1px dashed var(--soft-blue); padding-bottom: 4px; }
         
         .data-table { width: 100%; border-collapse: collapse; margin: 25px 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.01); }
         .data-table th, .data-table td { border: 1px solid var(--border-color); padding: 14px; font-size: 0.9rem; }
@@ -422,13 +426,12 @@
 
         footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-top: 1px solid var(--border-color); margin-top: 40px; }
 
-        /* --- RESPONSIVE LAYOUT --- */
         @media (max-width: 900px) {
             header { flex-direction: column; gap: 15px; padding: 15px; }
             .hero-top-layout { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
             .hero-illustration-box { justify-content: center; }
             .hero-action-side { justify-content: center; width: 100%; }
-            .hero-video-box { aspect-ratio: 16 / 9; } /* Kembali ke standar di mobile agar tidak terlalu gepeng */
+            .hero-video-box { aspect-ratio: 16 / 9; } 
             .video-overlay { padding: 20px; }
             .video-overlay h3 { font-size: 1.1rem; }
             .biodata-horizontal-card { flex-direction: column; text-align: center; padding: 30px 20px; gap: 20px; }
@@ -494,9 +497,8 @@
                 </div>
             </div>
 
-            <!-- KOMPONEN VIDEO MELEBAR (PENGGANTI KOTAK PERSEGI) -->
+            <!-- KOMPONEN VIDEO MELEBAR -->
             <div class="hero-video-box">
-                <!-- GANTI 'gambar/video-hero.mp4' DENGAN FILE VIDEOMU -->
                 <video autoplay loop muted playsinline>
                     <source src="gambar/video-hero.mp4" type="video/mp4">
                     Browser Anda tidak mendukung tag video.
@@ -544,7 +546,7 @@
                 <span class="stat-label">Kajian Modul</span>
             </div>
             <div class="stat-box">
-                <span class="stat-number">03</span>
+                <span class="stat-number">04</span>
                 <span class="stat-label">Evaluasi Tugas</span>
             </div>
             <div class="stat-box">
@@ -555,7 +557,7 @@
 
         <!-- POSTER VISUAL DENGAN BAHASA ARAB -->
         <div class="poster-section-container">
-            <h2 class="poster-section-title">🎨 Publikasi Infografis Teologis</h2>
+            <h2 class="poster-section-title">🎨 Publikasi Infografis Teológicos</h2>
             <p class="poster-section-subtitle">Visualisasi Aturan & Etika Kehidupan Khas Muslimah</p>
             
             <div class="poster-wrapper">
@@ -572,7 +574,7 @@
                             <div style="width: 100%;">
                                 <strong>1. Kewajiban Menutup Aurat Secara Sempurna</strong>
                                 <div class="point-ayat-box">
-                                    <p class="arabic-text">...يَٰٓأَيُّهَا ٱلنَّبِىُّ قُل لِّأَزْوَٰجِكَ وَبَنَاتِكَ وَنِسَآءِ ٱلْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَٰبِيبِهِنَّ</p>
+                                    <p class="arabic-text">...يَٰٓأَيُّهَا ٱلنَّبِىُّ قُل Lِّأَزْوَٰجِكَ وَبَنَاتِكَ وَنِسَآءِ ٱلْمُؤْمِنِينَ يُدْنِينَ عَلَيْهِنَّ مِن جَلَٰبِيبِهِنَّ</p>
                                     <p style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">"Wahai Nabi! Katakanlah kepada istri-istrimu, anak-anak perempuanmu dan istri-istri orang mukmin, 'Hendaklah mereka menutupkan jilbabnya ke seluruh tubuh mereka'..." (QS. Al-Ahzab: 59)</p>
                                 </div>
                                 <p>Pakaian wajib menutupi seluruh anggota tubuh yang dilarang untuk diperlihatkan kepada yang bukan mahram. Bagi wanita, aurat meliputi seluruh tubuh kecuali wajah dan kedua telapak tangan.</p>
@@ -670,6 +672,14 @@
                 <p>Studi Kasus & Interaksi</p>
                 <span>Buka Diskusi <i class="fas fa-chevron-right"></i></span>
             </div>
+
+            <!-- HALAMAN KEEMPAT: TUGAS 4 ARTIKEL ILMIAH SOSIAL -->
+            <div class="tugas-card" onclick="openModal('modalTugas4')">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>UAS</h3>
+                <p>Menyikapi Deviasi Moral & Agama</p>
+                <span>Baca Jurnal <i class="fas fa-chevron-right"></i></span>
+            </div>
         </div>
     </div>
 
@@ -749,6 +759,72 @@
         </div>
     </div>
 
+    <!-- MODAL BARU TUGAS 4: ARTIKEL ILMIAH SOSIO-RELIGIUS & STUDI KASUS -->
+    <div id="modalTugas4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalTugas4')">&times;</span>
+            <article class="jurnal-text-layout">
+                <header class="artikel-header">
+                    <h1 style="font-size: 1.5rem; line-height: 1.4;">REKONSILIASI SOSIAL DAN TEOLOGIS: STRATEGI MENYIKAPI DEVIASI MORAL AGAMA DI ERA DIGITAL</h1>
+                    <p style="color: var(--deep-pink); font-size: 0.8rem; font-weight: 700; margin-top: 5px;">Oleh: Eka Salsabila (NIM: 312310277)</p>
+                </header>
+
+                <p>
+                    <strong>Pendahuluan:</strong> Di tengah gelombang globalisasi dan percepatan disrupsi teknologi, batas-batas moral dan etika mengalami pergeseran destruktif. Fenomena masyarakat atau kelompok sosial yang bertindak tidak selaras dengan nilai moralitas umum dan pakem hukum agama kian masif ditemui, terutama pada ranah siber. Dinamika ini memerlukan strategi penyikapan yang komprehensif, tidak sekadar mengedepankan penghakiman sosial (*social labeling*), melainkan melalui pendekatan humanis preventif yang berlandaskan koridor syariat Islam.
+                </p>
+
+                <h2 class="section-title">Metodologi Pendekatan Transformatif Syar'i</h2>
+                <p>
+                    Dalam menghadapi kelompok masyarakat yang mengalami penurunan integritas akhlak, prinsip dasar yang harus diimplementasikan merujuk pada konsep <em>Amar Ma'ruf Nahi Munkar</em> yang dibekali oleh kelembutan cara (*hikmah*) dan komunikasi persuasif (*mau’izhah hasanah*). Islam melarang penumpasan kemungkaran yang memicu timbulnya kemungkaran baru yang jauh lebih destruktif.
+                </p>
+                <div class="jurnal-quote-box">
+                    <p class="arabic-text">ٱدْعُ إِلَىٰ سَبِيلِ رَبِّكَ بِٱلْحِكْمَةِ وَٱلْمَوْعِظَةِ ٱلْحَسَنَةِ ۖ وَجَٰدِلْهُم بِٱلَّتِى هِىَ أَحْسَنُ</p>
+                    <p style="font-size: 0.85rem; font-style: italic; color: var(--text-main);">"Serulah (manusia) kepada jalan Tuhanmu dengan hikmah dan pengajaran yang baik, dan berdebatlah dengan mereka dengan cara yang baik..." (QS. An-Nahl: 125)</p>
+                </div>
+
+                <h2 class="section-title">Studi Kasus: Fenomena Cyberbullying dan Online Shaming Kelompok Netizen</h2>
+                <p>
+                    <strong>Deskripsi Kasus:</strong> Maraknya aksi perundungan siber (*cyberbullying*), penyebaran fitnah (*hoax*), serta pembunuhan karakter secara massal (*online shaming*) yang diorganisasi oleh kelompok komunitas netizen di platform media sosial. Kelompok ini kerap kali melakukan penyerangan psikologis secara terstruktur kepada individu tertentu hingga menyebabkan depresi berat, yang secara eksplisit melanggar norma kesopanan Pancasila dan prinsip larangan <em>Ghibah</em> serta <em>Namimah</em> dalam teologi Islam.
+                </p>
+
+                <!-- AREA DISPLAY COMPONENT SCREENSHOT (POIN 2) -->
+<div style="text-align: center; margin: 25px 0;">
+    <p style="font-size: 0.75rem; color: var(--deep-pink); font-weight: 700; text-transform: uppercase; margin-bottom: 6px;">
+        <i class="fas fa-camera"></i> Bukti Screenshot Studi Kasus Digital
+    </p>
+    
+    <!-- Kotak placeholder diganti dengan tag img di bawah ini -->
+    <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 1px solid #CBD5E1; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+        <img src="gambar/studikasus.png" alt="Screenshot Perundungan Siber" style="width: 100%; height: auto; display: block;">
+    </div>
+</div>
+
+                <h2 class="section-title">Opini Pribadi & Solusi Akademis</h2>
+                <p>
+                    Menurut pandangan kritis saya, fenomena degradasi moral kolektif di ruang digital ini bersumber dari hilangnya rasa <em>Muraqabah</em> (kesadaran bahwa Allah Maha Mengawasi) akibat sekat anonimitas dunia maya. Kelompok masyarakat ini melupakan bahwa ketikan jempol di keyboard memiliki bobot dosa yang setara dengan ucapan lisan. 
+                </p>
+                <p>
+                    Solusi yang dapat ditempuh tidak hanya bergantung pada penegakan hukum UU ITE, melainkan penguatan literasi digital berbasis tauhid. Kita harus merespons dengan melakukan konter narasi positif, enggan terlibat dalam lingkaran siber yang destruktif, serta senantiasa menerapkan tabayyun (verifikasi informasi) demi menjaga kedamaian tatanan ukhuwah sosial.
+                </p>
+
+                <h2 class="section-title">Referensi Ilmiah (Penerbitan > 2020)</h2>
+                <ol style="padding-left: 20px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                    <li>Anwar, M. C. (2021). <em>Etika Komunikasi di Media Sosial: Perspektif Hukum Islam dan UU ITE</em>. Jurnal Komunikasi Kontemporer, 9(2), 145-158.</li>
+                    <li>Nurdin, R., & Saputra, A. (2022). <em>Dinamika Pergeseran Norma Sosial Masyarakat Modern di Era Disrupsi Digital</em>. Jurnal Sosiologi Agama, 16(1), 34-49.</li>
+                    <li>Suryadilaga, M. A. (2023). <em>Konseptualisasi Amar Ma'ruf Nahi Munkar Berbasis Media Siber: Pendekatan Maqashid Syariah</em>. Jakarta: Rajawali Pers.</li>
+                </ol>
+            </article>
+
+            <!-- PEMBERITAHUAN EDLINK PADA INPUT TUGAS (POIN 3) -->
+            <div style="margin-top: 30px; background: rgba(108,142,191,0.08); padding: 20px; border-radius: 8px; border: 1px solid var(--soft-blue);">
+                <h4 style="font-size: 0.9rem; color: var(--deep-blue); margin-bottom: 4px;"><i class="fas fa-info-circle"></i> Instruksi Pengumpulan Edlink:</h4>
+                <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
+                    Pastikan Anda mengambil screenshot halaman modal artikel ini beserta visual studi kasusnya, kemudian unggah bukti gambar tersebut pada sistem penugasan kelas <strong>Edlink Universitas Pelita Bangsa</strong> yang telah disediakan oleh dosen pengampu.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Eka Salsabila Digital Portfolio. All Rights Reserved. Designed Elegantly.</p>
@@ -802,97 +878,69 @@
         }
 
         function saveComment() {
-    const input = document.getElementById('commentInput');
-    if (input.value.trim() === "") return;
-    
-    let comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
-    // Menggunakan Date.now() sebagai ID unik untuk setiap komentar
-    comments.push({ id: Date.now(), text: input.value, time: new Date().toLocaleTimeString() });
-    
-    localStorage.setItem('elegant_comments', JSON.stringify(comments));
-    input.value = "";
-    displayComments();
-}
-
-        function loadComments() {
-            let list = document.getElementById("commentList");
-            list.innerHTML = "";
-            let comments = JSON.parse(localStorage.getItem("myComments") || "[]");
-
-            comments.forEach(c => {
-            let div = document.createElement("div");
-            div.style.marginBottom = "15px";
-            div.style.padding = "10px";
-            div.style.border = "1px solid #eee";
-            div.style.borderRadius = "5px";
-            div.style.display = "flex";
-            div.style.justifyContent = "space-between";
-            div.innerHTML = `
-            <span>${c.text}</span>
-            <div>
-                <button onclick="editComment(${c.id})" style="margin-right: 5px; cursor: pointer;">Edit</button>
-                <button onclick="deleteComment(${c.id})" style="cursor: pointer; color: red;">Hapus</button>
-            </div>
-        `;
-        list.appendChild(div);
-                            });
+            const input = document.getElementById('commentInput');
+            if (input.value.trim() === "") return;
+            let comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
+            comments.push({ id: Date.now(), text: input.value, time: new Date().toLocaleTimeString() });
+            localStorage.setItem('elegant_comments', JSON.stringify(comments));
+            input.value = "";
+            displayComments();
         }
 
-function deleteComment(id) {
-    if(confirm("Hapus gagasan ini?")) {
-        let comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
-        comments = comments.filter(c => c.id !== id);
-        localStorage.setItem('elegant_comments', JSON.stringify(comments));
-        displayComments();
-    }
-}
+        function deleteComment(id) {
+            if(confirm("Hapus gagasan ini?")) {
+                let comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
+                comments = comments.filter(c => c.id !== id);
+                localStorage.setItem('elegant_comments', JSON.stringify(comments));
+                displayComments();
+            }
+        }
 
-function editComment(id) {
-    let comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
-    let comment = comments.find(c => c.id === id);
-    let newText = prompt("Edit gagasan Anda:", comment.text);
-    
-    if (newText !== null && newText.trim() !== "") {
-        comment.text = newText;
-        localStorage.setItem('elegant_comments', JSON.stringify(comments));
-        displayComments();
-    }
-}
+        function editComment(id) {
+            let comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
+            let comment = comments.find(c => c.id === id);
+            let newText = prompt("Edit gagasan Anda:", comment.text);
+            if (newText !== null && newText.trim() !== "") {
+                comment.text = newText;
+                localStorage.setItem('elegant_comments', JSON.stringify(comments));
+                displayComments();
+            }
+        }
 
-document.addEventListener("DOMContentLoaded", function() {
-    displayComments();
-});
         function displayComments() {
-    const container = document.getElementById('commentList');
-    const comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
-    container.innerHTML = '';
-    
-    // Loop melalui komentar
-    comments.slice().reverse().forEach(c => {
-        container.innerHTML += `
-            <div style="background:#FFF; padding:15px; border-radius:8px; margin-bottom:10px; border:1px solid var(--border-color); position:relative; box-shadow:0 2px 8px rgba(0,0,0,0.01);">
-                <div style="display:flex; justify-content:space-between; align-items:center;">
-                    <strong style="color:var(--deep-blue); font-size:0.85rem;">Rekan Akademisi</strong>
-                    <div style="display:flex; gap:12px;">
-                        <button onclick="editComment(${c.id})" style="border:none; background:none; cursor:pointer; color:var(--soft-blue); font-size:0.9rem;">
-                            <i class="fas fa-edit"></i>
-                        </button>
-                        <button onclick="deleteComment(${c.id})" style="border:none; background:none; cursor:pointer; color:var(--deep-pink); font-size:0.9rem;">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                    </div>
-                </div>
-                <small style="color:var(--text-muted); font-size:0.7rem;">${c.time}</small>
-                <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem; border-top: 1px dashed var(--border-color); padding-top: 8px;">${c.text}</p>
-            </div>`;
-    });
-}
+            const container = document.getElementById('commentList');
+            const comments = JSON.parse(localStorage.getItem('elegant_comments')) || [];
+            container.innerHTML = '';
+            comments.slice().reverse().forEach(c => {
+                container.innerHTML += `
+                    <div style="background:#FFF; padding:15px; border-radius:8px; margin-bottom:10px; border:1px solid var(--border-color); position:relative; box-shadow:0 2px 8px rgba(0,0,0,0.01);">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <strong style="color:var(--deep-blue); font-size:0.85rem;">Rekan Akademisi</strong>
+                            <div style="display:flex; gap:12px;">
+                                <button onclick="editComment(${c.id})" style="border:none; background:none; cursor:pointer; color:var(--soft-blue); font-size:0.9rem;">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button onclick="deleteComment(${c.id})" style="border:none; background:none; cursor:pointer; color:var(--deep-pink); font-size:0.9rem;">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <small style="color:var(--text-muted); font-size:0.7rem;">${c.time}</small>
+                        <p style="margin-top:8px; color:var(--text-muted); font-size:0.9rem; border-top: 1px dashed var(--border-color); padding-top: 8px;">${c.text}</p>
+                    </div>`;
+            });
+        }
+
         window.onclick = function(event) {
             if (event.target.className === 'modal') { 
                 event.target.style.display = "none"; 
                 document.body.style.overflow = "auto";
             }
         }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            displayComments();
+        });
     </script>
 </body>
 </html>
